@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import AboutUs from './components/AboutUs';
 import ProductListingPage from './pages/ProductListingPage';
-import ShoppingCartPage from './pages/';
+import ShoppingCartPage from './pages/ShoppingCartPage';
 import './App.css';
 
 function LandingPage() {

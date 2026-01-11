@@ -1,9 +1,13 @@
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../store';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, selectCartItems } from '../store';
 import './ProductCard.css';
 
 function ProductCard({ plant }) {
   const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+
+  // Check if item is already in cart
+  const isInCart = cartItems.some(item => item.id === plant.id);
 
   const handleAddToCart = () => {
     dispatch(addToCart(plant));
@@ -18,8 +22,12 @@ function ProductCard({ plant }) {
         <h3 className="product-name">{plant.name}</h3>
         <p className="product-description">{plant.description}</p>
         <p className="product-price">${plant.price}</p>
-        <button className="add-to-cart-btn" onClick={handleAddToCart}>
-          Add to Cart
+        <button
+          className={`add-to-cart-btn ${isInCart ? 'added' : ''}`}
+          onClick={handleAddToCart}
+          disabled={isInCart}
+        >
+          {isInCart ? 'Added to Cart' : 'Add to Cart'}
         </button>
       </div>
     </div>

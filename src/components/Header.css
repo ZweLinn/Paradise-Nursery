@@ -44,6 +44,12 @@
   color: #8bc34a;
 }
 
+.nav-link.active {
+  color: #8bc34a;
+  border-bottom: 2px solid #8bc34a;
+  padding-bottom: 2px;
+}
+
 .cart-link {
   position: relative;
   display: flex;

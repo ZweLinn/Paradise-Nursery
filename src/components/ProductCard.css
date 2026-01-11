@@ -72,3 +72,14 @@
 .add-to-cart-btn:active {
   background-color: #1d4a17;
 }
+
+.add-to-cart-btn:disabled,
+.add-to-cart-btn.added {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.add-to-cart-btn:disabled:hover,
+.add-to-cart-btn.added:hover {
+  background-color: #9e9e9e;
+}
