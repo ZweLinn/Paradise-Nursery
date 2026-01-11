@@ -1,0 +1,23 @@
+.about-us {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  color: #8bc34a;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin: 0 0 1rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about-description:last-child {
+  margin-bottom: 0;
+}
